@@ -35,9 +35,12 @@
       </today>
     <% end %>
     </table>
+
+  <h2>NEW book</h2>
+
   <div id="error_explanation">
     <% if @book_new.errors.any? %>
-      <%= @book_new.errors.count %> errors prohidited this book from being sabed:
+      <%= @book_new.errors.count %> errors prohidited this book from being saved:
       <ul>
         <% @book_new.errors.full_messages.each do |message| %>
         <li><%= message %></li>
@@ -45,8 +48,6 @@
       </ul>
     <% end %>
   </div>
-
-  <h2>NEW book</h2>
 
   <%= form_with model: @book_new do |f| %>
     <div class="field">
